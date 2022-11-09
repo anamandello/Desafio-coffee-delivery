@@ -1,33 +1,26 @@
 import { createContext, ReactNode, useEffect, useReducer } from "react"
-import { TypeItem } from "../@types/typeItem"
 import { updateValorCartAction, removeItemAction, addItemAction, plusItemCartAction, minusItemCartAction, resetCartAction } from "../reducers/listCart/actions"
-import { listCartReducer } from "../reducers/listCart/reducer"
+import { ItemListCart, listCartReducer } from "../reducers/listCart/reducer"
 
-interface itemListCart{
-  item: TypeItem,
-  amount: number,
-  priceTotalItem: number
-}
-
-interface listCartContextType{
-  items: itemListCart[],
-  totalPrice: number,
-  totalAmount: number,
-  addItemListCart: (newItem: itemListCart) => void,
-  removeItemListCart: (id: number) => void,
-  plusItemCart: (id: number) => void,
-  minusItemCart: (id: number) => void,
-  resetCart: () => void,
+interface ListCartContextType{
+  items: ItemListCart[]
+  totalPrice: number
+  totalAmount: number
+  addItemListCart: (newItem: ItemListCart) => void
+  removeItemListCart: (id: number) => void
+  plusItemCart: (id: number) => void
+  minusItemCart: (id: number) => void
+  resetCart: () => void
 }
  
-export const ListCartContext = createContext({} as listCartContextType)
+export const ListCartContext = createContext({} as ListCartContextType)
 
-interface listCartContextProps{
+interface ListCartContextProps{
   children: ReactNode
 }
 
 export function ListCartContextProvider(
-  {children}: listCartContextProps
+  {children}: ListCartContextProps
 ){
   const [listCartState, dispatch] = useReducer(
     listCartReducer,
@@ -35,17 +28,36 @@ export function ListCartContextProvider(
       items: [],
       totalPrice: 0,
       totalAmount: 0
+    },
+    () => {
+      const storedStateAsJSON = localStorage.getItem('@coffee-delivery:cart-state-1.0.0')
+      console.log(storedStateAsJSON)
+
+      if(storedStateAsJSON){
+        return JSON.parse(storedStateAsJSON)
+      }
+
+      return {
+        items: [],
+        totalPrice: 0,
+        totalAmount: 0
+      }
     }
   )
-
+  
+  useEffect(() => {
+    const stateJSON = JSON.stringify(listCartState)
+    
+    localStorage.setItem('@coffee-delivery:cart-state-1.0.0', stateJSON)
+  }, [listCartState])
+  
   const { items, totalPrice, totalAmount } = listCartState
-
+  
   useEffect(() => {
     dispatch(updateValorCartAction())
   }, [items])
 
-  
-  function addItemListCart(newItem: itemListCart) {
+  function addItemListCart(newItem: ItemListCart) {
     dispatch(addItemAction(newItem))
   }
 

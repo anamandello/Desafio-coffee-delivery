@@ -1,18 +1,18 @@
 import { TypeItem } from "../../@types/typeItem"
 
-export interface itemListCart{
+export interface ItemListCart{
   item: TypeItem,
   amount: number,
   priceTotalItem: number
 }
 
-interface listCartContextType{
-  items: itemListCart[],
+interface ListCartState{
+  items: ItemListCart[],
   totalPrice: number,
   totalAmount: number
 }
 
-export function listCartReducer(state:listCartContextType, action: any) {
+export function listCartReducer(state:ListCartState, action: any) {
   switch(action.type){
     case 'add_item_list':
       if(state.items.length === 0){
@@ -75,10 +75,10 @@ export function listCartReducer(state:listCartContextType, action: any) {
     case 'update_valor_cart':
       return {
         ...state,
-        totalPrice: state.items.reduce((total, item: itemListCart) => {
+        totalPrice: state.items.reduce((total, item: ItemListCart) => {
           return total + item.priceTotalItem
         }, 0),
-        totalAmount: state.items.reduce((total, item: itemListCart) => {
+        totalAmount: state.items.reduce((total, item: ItemListCart) => {
           return total + item.amount
         }, 0),
       }
