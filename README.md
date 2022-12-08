@@ -9,7 +9,7 @@ Site de compra de café.
 - `Adicionar produtos no carrinho de compras`: Após a escolha do produto no site, pode-se adicionar o item no carrinho com a quantidade desejada.
 - `Aumentar e diminuir a quantidade do produto no carrinho`: Na página do carrinho pode-se aumentar e diminuir a quantidade do item selecionado.
 - `Remoção do item do carrinho`: Na página do carrinho pode-se excluir o item desejado.
-- `Formulário com validação dos campos`: Para concluir o pedido deve-se preencher os campos do formulário corretamente, caso alguma informação esteja fora do padrão definido, aparece uma mensagem informando o erro para o cliente corrigir a informação.
+- `Formulário com validação dos campos`: Para concluir o pedido deve-se preencher os campos do formulário corretamente, caso alguma informação esteja fora do padrão definido, aparecerá uma mensagem informando o erro para o cliente corrigir a informação.
 - `Finalização`: Após a finalização da compra é mostrado na tela as informações de entrega conforme especificado no formulário.
 
 # :heavy_check_mark: Tecnologias utilizadas
