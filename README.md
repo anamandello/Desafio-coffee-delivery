@@ -16,7 +16,6 @@ Site de compra de café.
 ![Página inicial do projeto](https://github.com/anamandello/Desafio-coffee-delivery/blob/main/public/ImagesReadme/CoffeeDelivery02.PNG)
 
 #
-![Página inicial do projeto](https://github.com/anamandello/Desafio-coffee-delivery/blob/main/public/ImagesReadme/CoffeeDelivery03.PNG)
 
 #
 ![Página inicial do projeto](https://github.com/anamandello/Desafio-coffee-delivery/blob/main/public/ImagesReadme/CoffeeDelivery04.PNG)
