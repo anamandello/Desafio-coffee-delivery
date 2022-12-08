@@ -18,7 +18,7 @@ export function InfoCart() {
       <div>
         <TextPrice><p>Total de Items</p><span>R${totalPrice.toFixed(2)}</span></TextPrice>
         <TextPrice><p>Entrega</p><span>R$ 3,50</span></TextPrice>
-        <TextPrice><p>Total</p><span>R${totalPrice.toFixed(2)}</span></TextPrice>
+        <TextPrice><p>Total</p><span>R${(totalPrice - 3.5).toFixed(2)}</span></TextPrice>
       </div>
       <Finish type="submit">Confirmar Pedido</Finish>
     </ItemsCart>
