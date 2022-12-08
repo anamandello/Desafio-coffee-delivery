@@ -12,14 +12,6 @@ Site de compra de café.
 - `Formulário com validação dos campos`: Para concluir o pedido deve-se preencher os campos do formulário corretamente, caso alguma informação esteja fora do padrão definido, aparece uma mensagem informando o erro para o cliente corrigir a informação.
 - `Finalização`: Após a finalização da compra é mostrado na tela as informações de entrega conforme especificado no formulário.
 
-# 
-![Página inicial do projeto](https://github.com/anamandello/Desafio-coffee-delivery/blob/main/public/ImagesReadme/CoffeeDelivery02.PNG)
-
-#
-
-#
-![Página inicial do projeto](https://github.com/anamandello/Desafio-coffee-delivery/blob/main/public/ImagesReadme/CoffeeDelivery04.PNG)
-
 # :heavy_check_mark: Tecnologias utilizadas
 <ul>
   <li>ReactJs</li>
@@ -32,6 +24,15 @@ Site de compra de café.
   <li>Routes</li>
   <li>Zod para validação do formulário</li>
 </ul>
+
+# 
+![Página inicial do projeto](https://github.com/anamandello/Desafio-coffee-delivery/blob/main/public/ImagesReadme/CoffeeDelivery02.PNG)
+
+#
+![Página carrinho](https://github.com/anamandello/Desafio-coffee-delivery/blob/main/public/ImagesReadme/CoffeeDelivery03.PNG)
+
+#
+![Página finalização](https://github.com/anamandello/Desafio-coffee-delivery/blob/main/public/ImagesReadme/CoffeeDelivery04.PNG)
 
 # 
 Layout disponibilizado pela Rocketseat no Figma para realização do desenvolvimento.
