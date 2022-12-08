@@ -1,4 +1,4 @@
-import { itemListCart } from "./reducer";
+import { ItemListCart } from "./reducer";
 
 export enum ActionsType{
   addItemList = 'add_item_list',
@@ -9,7 +9,7 @@ export enum ActionsType{
   resetCart = 'reset_cart'
 }
 
-export function addItemAction(newItem: itemListCart){
+export function addItemAction(newItem: ItemListCart){
   return {
     type: ActionsType.addItemList,
     payload: {

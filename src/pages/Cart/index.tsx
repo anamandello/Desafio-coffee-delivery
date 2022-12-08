@@ -40,9 +40,9 @@ export function Cart(){
     }
   })
 
-  async function handleCreateRequest(data: NewRequestFormData){
-    await reset()
-    await resetCart()
+  function handleCreateRequest(data: NewRequestFormData){
+    reset()
+    resetCart()
     navigate('/success', {state: data})
   }
   
@@ -55,7 +55,7 @@ export function Cart(){
         <h2>Complete seu pedido</h2>
         <Datas>
           <FormProvider {...newRequestForm}>
-            <DatasPayment />    
+            <DatasPayment /> 
             <MethodPayment />
           </FormProvider>
         </Datas>

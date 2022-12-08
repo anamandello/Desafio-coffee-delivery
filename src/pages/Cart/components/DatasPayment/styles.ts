@@ -65,7 +65,6 @@ export const AddressDatas = styled.div`
       width: 3.75rem;
     }
 
-
     @media (min-width: 0) and (max-width: 500px){
       #cep, #rua, #numero, #complemento, #bairro, #cidade, #uf{
         width: 100%;
